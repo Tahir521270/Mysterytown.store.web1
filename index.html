@@ -156,24 +156,12 @@
   </footer>
 
   <script>
-    function buyItem(productName, price) {
-      const discordUser = prompt("أدخل اسم المستخدم في ديسكورد:");
-      if (discordUser) {
-        alert(`تم تسجيل طلبك للمنتج "${productName}" بقيمة ${price}$! سيتم إرسال التفاصيل إلى بريدك الإلكتروني.`);
-        // إرسال البيانات إلى البريد الإلكتروني:
-        const emailData = {
-          to_email: "sarawily0@gmail.com",
-          subject: "طلب شراء جديد",
-          message: `المنتج: ${productName}\nالسعر: ${price}\nاسم المستخدم في ديسكورد: ${discordUser}`
-        };
-        sendEmail(emailData);
-      }
+    function buyProduct(productName, price) {
+    const discordUsername = prompt("الرجاء إدخال اسم المستخدم في ديسكورد:");
+    if (discordUsername) {
+      const emailBody = `تم شراء المنتج: ${productName}\nالسعر: ${price}\nاسم المستخدم في ديسكورد: ${discordUsername}`;
+      window.location.href = `mailto:sarawily0@gmail.com?subject=طلب شراء منتج&body=${encodeURIComponent(emailBody)}`;
+      alert("تم إرسال طلبك بنجاح!");
     }
-
-    function sendEmail(data) {
-      console.log("بيانات الطلب:", data);
-      // دمج مع خدمة EmailJS لإرسال البريد.
-    }
-  </script>
-</body>
-</html>
+  }
+</script>
