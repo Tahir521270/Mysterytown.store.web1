@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #ffe6e6, #e6f7ff);
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
       color: #333;
       margin: 0;
       padding: 0;
@@ -18,8 +18,8 @@
     h1, h2 {
       margin: 20px 0;
       font-size: 36px;
-      color: #5c5c8a;
-      text-shadow: 0 4px 8px rgba(92, 92, 138, 0.2);
+      color: #0277bd;
+      text-shadow: 0 4px 8px rgba(2, 119, 189, 0.2);
     }
 
     .container {
@@ -31,54 +31,80 @@
     }
 
     .card {
-      background: #fffdfd;
-      border: 1px solid #ddd;
+      background: #ffffff;
+      border: 2px solid #90caf9;
       border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     }
 
     .card img {
       max-width: 100%;
       border-radius: 10px;
-      transition: transform 0.4s ease, filter 0.4s ease;
+      transition: transform 0.5s ease, filter 0.5s ease;
     }
 
     .card:hover img {
-      transform: scale(1.1);
-      filter: brightness(1.1);
+      transform: scale(1.2);
+      filter: brightness(1.2);
     }
 
     .button {
-      background: linear-gradient(45deg, #ffd6d6, #a8d5ff);
-      color: #333;
+      background: #42a5f5;
+      color: #fff;
       border: none;
       padding: 12px 20px;
       margin-top: 15px;
       cursor: pointer;
       border-radius: 5px;
       font-size: 16px;
-      transition: background 0.3s ease, transform 0.3s ease;
+      transition: background 0.4s ease, transform 0.4s ease;
     }
 
     .button:hover {
-      background: linear-gradient(45deg, #ffa8a8, #87c7ff);
-      transform: translateY(-3px);
+      background: #1e88e5;
+      transform: translateY(-5px);
     }
 
     .button:active {
       transform: translateY(0);
     }
 
+    .discord-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background: #7289da;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .discord-icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .discord-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
     footer {
       margin-top: 20px;
-      background: #5c5c8a;
+      background: #0277bd;
       color: #fff;
       padding: 10px 0;
       font-size: 14px;
@@ -93,18 +119,11 @@
   <!-- قسم السيارات -->
   <h2>السيارات</h2>
   <div class="container">
-    <!-- السيارات -->
     <div class="card">
-      <img src="05-buffalo-car-san-andreas.jpg" alt="سيارة Buffalo">
+      <img src="5-buffalo-car-san-andreas.jpg" alt="سيارة Buffalo">
       <h2>سيارة Buffalo</h2>
       <p>السعر: 750,000$</p>
       <button class="button" onclick="buyItem('سيارة Buffalo', 750000)">شراء</button>
-    </div>
-    <div class="card">
-      <img src="which-is-your-favourite-sports-cars-in-gta-sa-my-favourite-v0-7xsg1tapw0qb1.jpg" alt="سيارة رياضية">
-      <h2>سيارة رياضية</h2>
-      <p>السعر: 1,000,000$</p>
-      <button class="button" onclick="buyItem('سيارة رياضية', 1000000)">شراء</button>
     </div>
     <div class="card">
       <img src="hqdefault.jpg" alt="سيارة HQ">
@@ -112,42 +131,22 @@
       <p>السعر: 450,000$</p>
       <button class="button" onclick="buyItem('سيارة HQ', 450000)">شراء</button>
     </div>
-    <div class="card">
-      <img src="images_gta-san-andreas_vehicles_zr-350.webp" alt="سيارة ZR-350">
-      <h2>سيارة ZR-350</h2>
-      <p>السعر: 950,000$</p>
-      <button class="button" onclick="buyItem('سيارة ZR-350', 950000)">شراء</button>
-    </div>
   </div>
 
   <!-- قسم الأسلحة -->
   <h2>الأسلحة</h2>
   <div class="container">
-    <!-- الأسلحة -->
-    <div class="card">
-      <img src="IMG_٢٠٢٤١٢٢١_١٦٤٤٢٢.jpg" alt="ديقل">
-      <h2>مسدس</h2>
-      <p>السعر: 20,000$</p>
-      <button class="button" onclick="buyItem('مسدس', 20000)">شراء</button>
-    </div>
-    <div class="card">
-      <img src="images_gta-san-andreas_weapons_combat-shotgun.webp" alt="بندقية قتال">
-      <h2>بندقية قتال</h2>
-      <p>السعر: 25,000$</p>
-      <button class="button" onclick="buyItem('بندقية قتال', 25000)">شراء</button>
-    </div>
     <div class="card">
       <img src="images_gta-san-andreas_weapons_resized_ak-47__108x108.webp" alt="AK-47">
       <h2>AK-47</h2>
       <p>السعر: 30,000$</p>
       <button class="button" onclick="buyItem('AK-47', 30000)">شراء</button>
     </div>
-    <div class="card">
-      <img src="images_gta-san-andreas_weapons_resized_smg__185x185.webp" alt="SMG">
-      <h2>SMG</h2>
-      <p>السعر: 25,000$</p>
-      <button class="button" onclick="buyItem('SMG', 25000)">شراء</button>
-    </div>
+  </div>
+
+  <!-- أيقونة ديسكورد -->
+  <div class="discord-icon" onclick="window.open('https://discord.gg/mtrp', '_blank')">
+    <img src="discord-icon.png" alt="Discord">
   </div>
 
   <!-- الحقوق -->
@@ -156,12 +155,20 @@
   </footer>
 
   <script>
-  function buyProduct(productName, price) {
-    const discordUsername = prompt("الرجاء إدخال اسم المستخدم في ديسكورد:");
-    if (discordUsername) {
-      const emailBody = `تم شراء المنتج: ${productName}\nالسعر: ${price}\nاسم المستخدم في ديسكورد: ${discordUsername}`;
-      window.location.href = `mailto:sarawily0@gmail.com?subject=طلب شراء منتج&body=${encodeURIComponent(emailBody)}`;
-      alert("تم إرسال طلبك بنجاح!");
+    function buyItem(productName, price) {
+      const discordUser = prompt("أدخل اسم المستخدم في ديسكورد:");
+      if (discordUser) {
+        const emailContent = `
+          منتج: ${productName}
+          السعر: ${price}$
+          اسم ديسكورد: ${discordUser}
+        `;
+        window.open(`mailto:sarawily0@gmail.com?subject=طلب شراء&body=${encodeURIComponent(emailContent)}`);
+        alert("تم إرسال طلبك بنجاح! سيتم مراجعة طلبك قريبًا.");
+      } else {
+        alert("يجب إدخال اسم المستخدم في ديسكورد.");
+      }
     }
-  }
-</script>
+  </script>
+</body>
+</html>
