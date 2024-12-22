@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-      color: #333;
+      background: linear-gradient(135deg, #4facfe, #00f2fe); /* تدرج أزرق جذاب */
+      color: #fff;
       margin: 0;
       padding: 0;
       direction: rtl;
@@ -18,8 +18,8 @@
     h1, h2 {
       margin: 20px 0;
       font-size: 36px;
-      color: #0277bd;
-      text-shadow: 0 4px 8px rgba(2, 119, 189, 0.2);
+      color: #ffffff;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
     .container {
@@ -32,7 +32,8 @@
 
     .card {
       background: #ffffff;
-      border: 2px solid #90caf9;
+      color: #333;
+      border: 2px solid #80d0ff; /* لون أزرق خفيف */
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -56,7 +57,7 @@
     }
 
     .button {
-      background: #42a5f5;
+      background: linear-gradient(90deg, #1d2671, #c33764); /* تدرج بين البنفسجي والوردي */
       color: #fff;
       border: none;
       padding: 12px 20px;
@@ -68,7 +69,7 @@
     }
 
     .button:hover {
-      background: #1e88e5;
+      background: linear-gradient(90deg, #c33764, #1d2671);
       transform: translateY(-5px);
     }
 
@@ -104,7 +105,7 @@
 
     footer {
       margin-top: 20px;
-      background: #0277bd;
+      background: #1d2671;
       color: #fff;
       padding: 10px 0;
       font-size: 14px;
@@ -126,10 +127,10 @@
       <button class="button" onclick="buyItem('سيارة Buffalo', 750000)">شراء</button>
     </div>
     <div class="card">
-      <img src="hqdefault.jpg" alt="سيارة HQ">
-      <h2>سيارة HQ</h2>
-      <p>السعر: 450,000$</p>
-      <button class="button" onclick="buyItem('سيارة HQ', 450000)">شراء</button>
+      <img src="which-is-your-favourite-sports-cars-in-gta-sa-my-favourite-v0-7xsg1tapw0qb1.jpg" alt="سيارة رياضية">
+      <h2>سيارة رياضية</h2>
+      <p>السعر: 1,000,000$</p>
+      <button class="button" onclick="buyItem('سيارة رياضية', 1000000)">شراء</button>
     </div>
   </div>
 
@@ -141,6 +142,12 @@
       <h2>AK-47</h2>
       <p>السعر: 30,000$</p>
       <button class="button" onclick="buyItem('AK-47', 30000)">شراء</button>
+    </div>
+    <div class="card">
+      <img src="images_gta-san-andreas_weapons_combat-shotgun.webp" alt="Combat Shotgun">
+      <h2>Combat Shotgun</h2>
+      <p>السعر: 25,000$</p>
+      <button class="button" onclick="buyItem('Combat Shotgun', 25000)">شراء</button>
     </div>
   </div>
 
